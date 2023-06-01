@@ -35,9 +35,9 @@ public class WorkPanel extends JPanel {
 	public DailyItemsPanel dailyItemsPanel = new DailyItemsPanel(this);
 	public ResourcesPanel filesPanel = new ResourcesPanel();
 	public JButton agendaB = new JButton();
-	public JButton tasksB = new JButton();
+//	public JButton tasksB = new JButton();
 	public JButton eventsB = new JButton();
-	public JButton filesB = new JButton();
+//	public JButton filesB = new JButton();
 	JButton currentB = null;
 	Border border1;
 
@@ -120,30 +120,30 @@ public class WorkPanel extends JPanel {
 		eventsB.setMargin(new Insets(0, 0, 0, 0));
 		//eventsB.setSelected(true);
 
-		tasksB.setSelected(true);
-		tasksB.setFont(new java.awt.Font("Dialog", 1, 10));
-		tasksB.setMargin(new Insets(0, 0, 0, 0));
-		tasksB.setIcon(
-			new ImageIcon(
-				main.java.memoranda.ui.AppFrame.class.getResource(
-					"/ui/icons/tasks.png")));
-		tasksB.setVerticalTextPosition(SwingConstants.BOTTOM);
-		tasksB.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				tasksB_actionPerformed(e);
-			}
-		});
-		tasksB.setVerticalAlignment(SwingConstants.TOP);
-		tasksB.setText(Local.getString("Tasks"));
-		tasksB.setHorizontalTextPosition(SwingConstants.CENTER);
-		tasksB.setFocusPainted(false);
-		tasksB.setBorderPainted(false);
-		tasksB.setContentAreaFilled(false);
-		tasksB.setPreferredSize(new Dimension(50, 50));
-		tasksB.setMinimumSize(new Dimension(30, 30));
-		tasksB.setOpaque(false);
-		tasksB.setMaximumSize(new Dimension(60, 80));
-		tasksB.setBackground(Color.white);
+//		tasksB.setSelected(true);
+//		tasksB.setFont(new java.awt.Font("Dialog", 1, 10));
+//		tasksB.setMargin(new Insets(0, 0, 0, 0));
+//		tasksB.setIcon(
+//			new ImageIcon(
+//				main.java.memoranda.ui.AppFrame.class.getResource(
+//					"/ui/icons/tasks.png")));
+//		tasksB.setVerticalTextPosition(SwingConstants.BOTTOM);
+//		tasksB.addActionListener(new java.awt.event.ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				tasksB_actionPerformed(e);
+//			}
+//		});
+//		tasksB.setVerticalAlignment(SwingConstants.TOP);
+//		tasksB.setText(Local.getString("Tasks"));
+//		tasksB.setHorizontalTextPosition(SwingConstants.CENTER);
+//		tasksB.setFocusPainted(false);
+//		tasksB.setBorderPainted(false);
+//		tasksB.setContentAreaFilled(false);
+//		tasksB.setPreferredSize(new Dimension(50, 50));
+//		tasksB.setMinimumSize(new Dimension(30, 30));
+//		tasksB.setOpaque(false);
+//		tasksB.setMaximumSize(new Dimension(60, 80));
+//		tasksB.setBackground(Color.white);
 
 		notesB.setFont(new java.awt.Font("Dialog", 1, 10));
 		notesB.setBackground(Color.white);
@@ -172,39 +172,39 @@ public class WorkPanel extends JPanel {
 		notesB.setSelected(true);
 		this.setPreferredSize(new Dimension(1073, 300));
 
-		filesB.setSelected(true);
-		filesB.setMargin(new Insets(0, 0, 0, 0));
-		filesB.setIcon(
-			new ImageIcon(
-				main.java.memoranda.ui.AppFrame.class.getResource(
-					"/ui/icons/files.png")));
-		filesB.setVerticalTextPosition(SwingConstants.BOTTOM);
-		filesB.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				filesB_actionPerformed(e);
-			}
-		});
-		filesB.setFont(new java.awt.Font("Dialog", 1, 10));
-		filesB.setVerticalAlignment(SwingConstants.TOP);
-		filesB.setText(Local.getString("Resources"));
-		filesB.setHorizontalTextPosition(SwingConstants.CENTER);
-		filesB.setFocusPainted(false);
-		filesB.setBorderPainted(false);
-		filesB.setContentAreaFilled(false);
-		filesB.setPreferredSize(new Dimension(50, 50));
-		filesB.setMinimumSize(new Dimension(30, 30));
-		filesB.setOpaque(false);
-		filesB.setMaximumSize(new Dimension(60, 80));
-		filesB.setBackground(Color.white);
+//		filesB.setSelected(true);
+//		filesB.setMargin(new Insets(0, 0, 0, 0));
+//		filesB.setIcon(
+//			new ImageIcon(
+//				main.java.memoranda.ui.AppFrame.class.getResource(
+//					"/ui/icons/files.png")));
+//		filesB.setVerticalTextPosition(SwingConstants.BOTTOM);
+//		filesB.addActionListener(new java.awt.event.ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				filesB_actionPerformed(e);
+//			}
+//		});
+//		filesB.setFont(new java.awt.Font("Dialog", 1, 10));
+//		filesB.setVerticalAlignment(SwingConstants.TOP);
+//		filesB.setText(Local.getString("Resources"));
+//		filesB.setHorizontalTextPosition(SwingConstants.CENTER);
+//		filesB.setFocusPainted(false);
+//		filesB.setBorderPainted(false);
+//		filesB.setContentAreaFilled(false);
+//		filesB.setPreferredSize(new Dimension(50, 50));
+//		filesB.setMinimumSize(new Dimension(30, 30));
+//		filesB.setOpaque(false);
+//		filesB.setMaximumSize(new Dimension(60, 80));
+//		filesB.setBackground(Color.white);
 		this.add(toolBar, BorderLayout.WEST);
 		this.add(panel, BorderLayout.CENTER);
 		panel.add(dailyItemsPanel, "DAILYITEMS");
 		panel.add(filesPanel, "FILES");
 		toolBar.add(agendaB, null);
 		toolBar.add(eventsB, null);
-		toolBar.add(tasksB, null);
+//		toolBar.add(tasksB, null);
 		toolBar.add(notesB, null);
-		toolBar.add(filesB, null);
+//		toolBar.add(filesB, null);
 		currentB = agendaB;
 		// Default blue color
 		currentB.setBackground(new Color(215, 225, 250));
@@ -247,7 +247,7 @@ public class WorkPanel extends JPanel {
 	public void tasksB_actionPerformed(ActionEvent e) {
 		cardLayout1.show(panel, "DAILYITEMS");
 		dailyItemsPanel.selectPanel("TASKS");
-		setCurrentButton(tasksB);
+//		setCurrentButton(tasksB);
 		Context.put("CURRENT_PANEL", "TASKS");
 	}
 
@@ -260,7 +260,7 @@ public class WorkPanel extends JPanel {
 
 	public void filesB_actionPerformed(ActionEvent e) {
 		cardLayout1.show(panel, "FILES");
-		setCurrentButton(filesB);
+//		setCurrentButton(filesB);
 		Context.put("CURRENT_PANEL", "FILES");
 	}
 
