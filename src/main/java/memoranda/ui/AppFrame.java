@@ -789,7 +789,7 @@ public class AppFrame extends JFrame {
                 "File Name:"));
         UIManager.put("FileChooser.filesOfTypeLabelText", Local.getString(
                 "Files of Type:"));
-        UIManager.put("FileChooser.openButtonText", Local.getString("Open"));
+        UIManager.put("FileChooser.openButtonText", Local.getString("Unpack"));
         UIManager.put("FileChooser.openButtonToolTipText", Local.getString(
                 "Open selected file"));
         UIManager
