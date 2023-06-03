@@ -737,7 +737,7 @@ public class AppFrame extends JFrame {
         UIManager.put("FileChooser.saveButtonToolTipText", Local.getString(
                 "Save selected file"));
         UIManager
-                .put("FileChooser.cancelButtonText", Local.getString("Cancel"));
+                .put("FileChooser.cancelButtonText", Local.getString("No no no!"));
         UIManager.put("FileChooser.cancelButtonToolTipText", Local.getString(
                 "Cancel"));
 
