@@ -62,7 +62,7 @@ public class TaskProgressEditor extends JPanel implements TableCellEditor{
 	
 	public void paintComponent(Graphics g){
 		TableCellRenderer cr = table.getCellRenderer(row, column);
-		((TaskProgressLabel)cr.getTableCellRendererComponent(table, current, isSelected, true, row, column)).paintComponent(g);
+//		((TaskProgressLabel)cr.getTableCellRendererComponent(table, current, isSelected, true, row, column)).paintComponent(g);
 		
 		label.setSize( this.getSize() );
 		

@@ -49,7 +49,7 @@ public class TaskTreeTableCellRenderer extends DefaultTreeCellRenderer implement
     // reusable cellrenderers
     JLabel label = new JLabel();
     //JLabel tree_label = new JLabel();
-    TaskProgressLabel progressLabel;
+//    TaskProgressLabel progressLabel;
     JPanel empty_panel = new JPanel();
     // get Task objects via table (maybe not most elegant solution)
     TaskTable table;
@@ -61,7 +61,7 @@ public class TaskTreeTableCellRenderer extends DefaultTreeCellRenderer implement
     public TaskTreeTableCellRenderer(TaskTable table) {
         super();
         this.table = table;
-        progressLabel = new TaskProgressLabel(table);
+//        progressLabel = new TaskProgressLabel(table);
         label.setOpaque(true);
     }
 
@@ -149,10 +149,11 @@ public class TaskTreeTableCellRenderer extends DefaultTreeCellRenderer implement
      * Component showing task progress
      */
     private Component getProgressCellRenderer(Task t, boolean selected, boolean hasFocus, int column) {
-        progressLabel.setTask(t);
-        progressLabel.setColumn(column);
-        applyFocus(hasFocus, progressLabel);
-        return progressLabel;
+//        progressLabel.setTask(t);
+//        progressLabel.setColumn(column);
+//        applyFocus(hasFocus, progressLabel);
+//        return progressLabel;
+        return null;
     }
 
     private Component getPriorityIconCellRenderer(Task t, boolean selected, boolean hasFocus) {
