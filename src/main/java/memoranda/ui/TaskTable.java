@@ -86,7 +86,7 @@ public class TaskTable extends JTable {
 
     protected TreeTableCellRenderer tree;
 
-    protected TaskTableModel model;
+//    protected TaskTableModel model;
     
     protected TreeTableModelAdapter modelAdapter;
     
@@ -124,10 +124,10 @@ public class TaskTable extends JTable {
     private void initTable() {
 	
 		//model = new TaskTableModel();
-		model = new TaskTableSorter( this );
+//		model = new TaskTableSorter( this );
 	
 		// Create the tree. It will be used as a renderer and editor.
-		tree = new TreeTableCellRenderer(model);
+//		tree = new TreeTableCellRenderer(model);
 		
 		// store tree expansion status and
 		// restore after sorting/project change etc.
@@ -135,7 +135,7 @@ public class TaskTable extends JTable {
 		tree.addTreeExpansionListener(expansion);
 	
 		// Install a tableModel representing the visible rows in the tree.
-		modelAdapter = new TreeTableModelAdapter(model, tree);
+//		modelAdapter = new TreeTableModelAdapter(model, tree);
 		super.setModel(modelAdapter);
 			
 		// Install the tree editor renderer and editor.
@@ -195,8 +195,8 @@ public class TaskTable extends JTable {
     }
     
     public void tableChanged() {
-		model.fireUpdateCache();
-		model.fireTreeStructureChanged();
+//		model.fireUpdateCache();
+//		model.fireTreeStructureChanged();
 		expansion.expand(tree);
 		updateUI();
     }
