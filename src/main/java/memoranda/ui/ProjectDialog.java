@@ -39,8 +39,8 @@ public class ProjectDialog extends JDialog {
     public boolean CANCELLED = true;
     boolean ignoreStartChanged = false;
     boolean ignoreEndChanged = false;
-    CalendarFrame endCalFrame = new CalendarFrame();
-    CalendarFrame startCalFrame = new CalendarFrame();
+//    CalendarFrame endCalFrame = new CalendarFrame();
+//    CalendarFrame startCalFrame = new CalendarFrame();
     GridBagConstraints gbc;
     JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
     JLabel header = new JLabel();
@@ -132,7 +132,7 @@ public class ProjectDialog extends JDialog {
                     sd = ed;
                   }
                 }
-                startCalFrame.cal.set(new CalendarDate(sd));
+//                startCalFrame.cal.set(new CalendarDate(sd));
                 ignoreStartChanged = false;
             }
         });
@@ -186,7 +186,7 @@ public class ProjectDialog extends JDialog {
                     endDate.getModel().setValue(sd);
                     ed = sd;
                 }
-                endCalFrame.cal.set(new CalendarDate(ed));
+//                endCalFrame.cal.set(new CalendarDate(ed));
                 ignoreEndChanged = false;
             }
         });
@@ -252,20 +252,20 @@ public class ProjectDialog extends JDialog {
         gbc.anchor = GridBagConstraints.EAST;
         getContentPane().add(bottomPanel, gbc);
     
-        startCalFrame.cal.addSelectionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (ignoreStartChanged)
-                    return;
-                startDate.getModel().setValue(startCalFrame.cal.get().getCalendar().getTime());
-            }
-        });
-        endCalFrame.cal.addSelectionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (ignoreEndChanged)
-                    return;
-                endDate.getModel().setValue(endCalFrame.cal.get().getCalendar().getTime());
-            }
-        });
+//        startCalFrame.cal.addSelectionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                if (ignoreStartChanged)
+//                    return;
+//                startDate.getModel().setValue(startCalFrame.cal.get().getCalendar().getTime());
+//            }
+//        });
+//        endCalFrame.cal.addSelectionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                if (ignoreEndChanged)
+//                    return;
+//                endDate.getModel().setValue(endCalFrame.cal.get().getCalendar().getTime());
+//            }
+//        });
     }
     
     void okButton_actionPerformed(ActionEvent e) {
@@ -289,21 +289,21 @@ public class ProjectDialog extends JDialog {
     
     void sdButton_actionPerformed(ActionEvent e) {
         //startCalFrame.setLocation(sdButton.getLocation());
-        startCalFrame.setLocation(0, 0);
-        startCalFrame.setSize((this.getContentPane().getWidth() / 2), 
-            this.getContentPane().getHeight());
-        this.getLayeredPane().add(startCalFrame);
-        startCalFrame.setTitle(Local.getString("Start date"));
-        startCalFrame.show();
+//        startCalFrame.setLocation(0, 0);
+//        startCalFrame.setSize((this.getContentPane().getWidth() / 2),
+//            this.getContentPane().getHeight());
+//        this.getLayeredPane().add(startCalFrame);
+//        startCalFrame.setTitle(Local.getString("Start date"));
+//        startCalFrame.show();
     }
     
     void edButton_actionPerformed(ActionEvent e) {
-        endCalFrame.setLocation((this.getContentPane().getWidth() / 2),0);
-        endCalFrame.setSize((this.getContentPane().getWidth() / 2), 
-            this.getContentPane().getHeight());
-        this.getLayeredPane().add(endCalFrame);
-        endCalFrame.setTitle(Local.getString("End date"));
-        endCalFrame.show();
+//        endCalFrame.setLocation((this.getContentPane().getWidth() / 2),0);
+//        endCalFrame.setSize((this.getContentPane().getWidth() / 2),
+//            this.getContentPane().getHeight());
+//        this.getLayeredPane().add(endCalFrame);
+//        endCalFrame.setTitle(Local.getString("End date"));
+//        endCalFrame.show();
     }
     
     public static void newProject() {

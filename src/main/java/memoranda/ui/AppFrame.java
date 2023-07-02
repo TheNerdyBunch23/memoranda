@@ -76,7 +76,7 @@ public class AppFrame extends JFrame {
     JLabel statusBar = new JLabel();
     BorderLayout borderLayout1 = new BorderLayout();
     JSplitPane splitPane = new JSplitPane();
-    ProjectsPanel projectsPanel = new ProjectsPanel();
+    //ProjectsPanel projectsPanel = new ProjectsPanel();
     boolean prPanelExpanded = false;
 
     JMenu jMenuEdit = new JMenu();
@@ -311,8 +311,8 @@ public class AppFrame extends JFrame {
         //splitPane.setOneTouchExpandable(true);
         splitPane.setDividerLocation(28);
         //projectsPanel.setMaximumSize(new Dimension(2147483647, 200));
-        projectsPanel.setMinimumSize(new Dimension(10, 28));
-        projectsPanel.setPreferredSize(new Dimension(10, 28));
+//        projectsPanel.setMinimumSize(new Dimension(10, 28));
+//        projectsPanel.setPreferredSize(new Dimension(10, 28));
         /*workPanel.setMinimumSize(new Dimension(734, 300));
          workPanel.setPreferredSize(new Dimension(1073, 300));*/
         splitPane.setDividerLocation(28);
@@ -324,7 +324,7 @@ public class AppFrame extends JFrame {
          }
          });
          */
-        jMenuFileNewPrj.setAction(projectsPanel.newProjectAction);
+//        jMenuFileNewPrj.setAction(projectsPanel.newProjectAction);
 
         jMenuFileUnpackPrj.setText(Local.getString("Unpack project") + "...");
         //jMenuFileExportNote.setText(Local.getString("Export current note")
@@ -473,7 +473,7 @@ public class AppFrame extends JFrame {
         //contentPane.add(toolBar, BorderLayout.NORTH);
         contentPane.add(statusBar, BorderLayout.SOUTH);
         contentPane.add(splitPane, BorderLayout.CENTER);
-        splitPane.add(projectsPanel, JSplitPane.TOP);
+//        splitPane.add(projectsPanel, JSplitPane.TOP);
         splitPane.add(workPanel, JSplitPane.BOTTOM);
        // jMenuEdit.add(jMenuEditUndo);
         //jMenuEdit.add(jMenuEditRedo);
@@ -554,18 +554,18 @@ public class AppFrame extends JFrame {
 
         setEnabledEditorMenus(false);
 
-        projectsPanel.AddExpandListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (prPanelExpanded) {
-                    prPanelExpanded = false;
-                    splitPane.setDividerLocation(28);
-                }
-                else {
-                    prPanelExpanded = true;
-                    splitPane.setDividerLocation(0.2);
-                }
-            }
-        });
+//        projectsPanel.AddExpandListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                if (prPanelExpanded) {
+//                    prPanelExpanded = false;
+//                    splitPane.setDividerLocation(28);
+//                }
+//                else {
+//                    prPanelExpanded = true;
+//                    splitPane.setDividerLocation(0.2);
+//                }
+//            }
+//        });
 
         java.awt.event.ActionListener setMenusDisabled = new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -824,7 +824,7 @@ public class AppFrame extends JFrame {
         Context.put("LAST_SELECTED_PACK_FILE", chooser.getSelectedFile());        
         java.io.File f = chooser.getSelectedFile();
         ProjectPackager.unpack(f);
-        projectsPanel.prjTablePanel.updateUI();
+//        projectsPanel.prjTablePanel.updateUI();
     }
 
     public void showPreferences() {
