@@ -47,8 +47,8 @@ public class EventNotificationDialog extends JFrame {
       new ExceptionDialog(ex);
     }
     timeLabel.setText(time);
-    timeLabel.setIcon(new ImageIcon(main.java.memoranda.ui.TaskDialog.class.getResource(
-            "/ui/icons/event48.png")));
+//    timeLabel.setIcon(new ImageIcon(main.java.memoranda.ui.TaskDialog.class.getResource(
+//            "/ui/icons/event48.png")));
     textLabel.setText(text);
     this.setSize(300,200);
     this.setLocationRelativeTo(null);
