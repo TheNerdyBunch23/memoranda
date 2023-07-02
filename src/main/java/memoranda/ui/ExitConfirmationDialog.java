@@ -22,6 +22,8 @@ import javax.swing.SwingConstants;
 import main.java.memoranda.util.Configuration;
 import main.java.memoranda.util.Local;
 
+import static java.lang.System.exit;
+
 public class ExitConfirmationDialog extends JDialog implements WindowListener {
     
     public boolean CANCELLED = false;
@@ -115,7 +117,7 @@ public class ExitConfirmationDialog extends JDialog implements WindowListener {
 	// ok button action
     void okB_actionPerformed(ActionEvent e) {
 		checkDoNotAsk();
-        this.dispose();
+        exit(0);
     }
 
 	//cancel button action

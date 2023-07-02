@@ -28,7 +28,7 @@ import main.java.memoranda.ProjectManager;
 import main.java.memoranda.ResourcesList;
 import main.java.memoranda.ResourcesListImpl;
 import main.java.memoranda.TaskList;
-import main.java.memoranda.TaskListImpl;
+//import main.java.memoranda.TaskListImpl;
 import main.java.memoranda.date.CalendarDate;
 import main.java.memoranda.ui.ExceptionDialog;
 import main.java.memoranda.ui.htmleditor.AltHTMLWriter;
@@ -47,9 +47,9 @@ public class FileStorage implements Storage {
     private HTMLEditorKit editorKit = new HTMLEditorKit();
 
     public FileStorage() {
-        /*The 'MEMORANDA_HOME' key is an undocumented feature for 
-          hacking the default location (Util.getEnvDir()) of the memoranda 
-          storage dir. Note that memoranda.config file is always placed at fixed 
+        /*The 'MEMORANDA_HOME' key is an undocumented feature for
+          hacking the default location (Util.getEnvDir()) of the memoranda
+          storage dir. Note that memoranda.config file is always placed at fixed
           location (Util.getEnvDir()) anyway */
         String mHome = (String) Configuration.get("MEMORANDA_HOME");
         if (mHome.length() > 0) {
@@ -68,7 +68,7 @@ public class FileStorage implements Storage {
             /*The XOM bug: reserved characters are not escaped*/
             //Serializer serializer = new Serializer(new FileOutputStream(filePath), "UTF-8");
             //serializer.write(doc);
-        	
+
             OutputStreamWriter fw =
                 new OutputStreamWriter(new FileOutputStream(filePath), "UTF-8");
             fw.write(doc.toXML());
@@ -113,7 +113,7 @@ public class FileStorage implements Storage {
             JN_DOCPATH + note.getProject().getID() + File.separator;
         doc.putProperty(
             javax.swing.text.Document.TitleProperty,
-            note.getTitle());        
+            note.getTitle());
         CalendarDate d = note.getDate();
 
         filename += note.getId();//d.getDay() + "-" + d.getMonth() + "-" + d.getYear();
@@ -143,9 +143,9 @@ public class FileStorage implements Storage {
             long t1 = new java.util.Date().getTime();
             FileOutputStream ostream = new FileOutputStream(filename);
             ObjectOutputStream oos = new ObjectOutputStream(ostream);
-        
+
             oos.writeObject((HTMLDocument)doc);
-        
+
             oos.flush();
             oos.close();
             ostream.close();
@@ -186,7 +186,7 @@ public class FileStorage implements Storage {
             //ex.printStackTrace();
             // Do nothing - we've got a new empty document!
         }
-        
+
         return doc;
         /*HTMLDocument doc = (HTMLDocument)editorKit.createDefaultDocument();
         if (note == null) return doc;
@@ -209,7 +209,7 @@ public class FileStorage implements Storage {
         return doc;*/
     }
 
-    public String getNoteURL(Note note) {        
+    public String getNoteURL(Note note) {
         return "file:" + JN_DOCPATH + note.getProject().getID() + "/" + note.getId();
     }
 
@@ -242,7 +242,7 @@ public class FileStorage implements Storage {
         ProjectManager._doc = openDocument(JN_DOCPATH + ".projects");
     }
     /**
-     * @see main.java.memoranda.util.Storage#storeProjectManager(nu.xom.Document)
+     * @see main.java.memoranda.util.Storage
      */
     public void storeProjectManager() {
         /*DEBUG*/
@@ -251,7 +251,7 @@ public class FileStorage implements Storage {
         saveDocument(ProjectManager._doc, JN_DOCPATH + ".projects");
     }
     /**
-     * @see main.java.memoranda.util.Storage#removeProject(main.java.memoranda.Project)
+     * @see main.java.memoranda.util.Storage
      */
     public void removeProjectStorage(Project prj) {
         String id = prj.getID();
@@ -273,7 +273,7 @@ public class FileStorage implements Storage {
                     + prj.getID()
                     + File.separator
                     + ".tasklist");
-            
+
             Document tasklistDoc = openDocument(fn);
             /*DocType tasklistDoctype = tasklistDoc.getDocType();
             String publicId = null;
@@ -285,13 +285,14 @@ public class FileStorage implements Storage {
                 // reload from new file
                 tasklistDoc = openDocument(fn);
             }*/
-            return new TaskListImpl(tasklistDoc, prj);   
+//            return new TaskListImpl(tasklistDoc, prj);
         }
         else {
             /*DEBUG*/
             System.out.println("[DEBUG] New task list created");
-            return new TaskListImpl(prj);
+//            return new TaskListImpl(prj);
         }
+        return null;
     }
 
     public void storeTaskList(TaskList tasklist, Project prj) {
@@ -354,7 +355,7 @@ public class FileStorage implements Storage {
             JN_DOCPATH + prj.getID() + File.separator + ".notes");
     }
     /**
-     * @see main.java.memoranda.util.Storage#openEventsList()
+     * @see main.java.memoranda.util.Storage
      */
     public void openEventsManager() {
         if (!new File(JN_DOCPATH + ".events").exists()) {
@@ -367,7 +368,7 @@ public class FileStorage implements Storage {
         EventsManager._doc = openDocument(JN_DOCPATH + ".events");
     }
     /**
-     * @see main.java.memoranda.util.Storage#storeEventsList()
+     * @see main.java.memoranda.util.Storage
      */
     public void storeEventsManager() {
         /*DEBUG*/
