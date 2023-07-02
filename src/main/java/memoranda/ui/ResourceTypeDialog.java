@@ -26,7 +26,7 @@ public class ResourceTypeDialog extends JDialog {
     JLabel header = new JLabel();
     JPanel dialogTitlePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
     JButton okB = new JButton();
-    ResourceTypePanel areaPanel = new ResourceTypePanel();
+    //ResourceTypePanel areaPanel = new ResourceTypePanel();
     //JPanel mPanel = new JPanel(new BorderLayout());
 
     Border border2;
@@ -58,7 +58,7 @@ public class ResourceTypeDialog extends JDialog {
         this.getContentPane().add(dialogTitlePanel, BorderLayout.NORTH);
         
         //mPanel.add(areaPanel, BorderLayout.CENTER);
-        this.getContentPane().add(areaPanel, BorderLayout.CENTER);
+//        this.getContentPane().add(areaPanel, BorderLayout.CENTER);
         
         cancelB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -98,7 +98,8 @@ public class ResourceTypeDialog extends JDialog {
     }
 
     public JList getTypesList() {
-      return areaPanel.typesList;
+//      return areaPanel.typesList;
+        return null;
     }
 
 

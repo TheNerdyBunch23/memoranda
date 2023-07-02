@@ -70,7 +70,7 @@ public class PreferencesDialog extends JDialog {
 
 	JPanel resourcePanel = new JPanel(new BorderLayout());
 
-	ResourceTypePanel resourceTypePanel = new ResourceTypePanel();
+	//ResourceTypePanel resourceTypePanel = new ResourceTypePanel();
 
 	Border rstPanelBorder;
 
@@ -417,8 +417,8 @@ public class PreferencesDialog extends JDialog {
 
 		// Build Tab2
 		rstPanelBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5);
-		resourceTypePanel.setBorder(rstPanelBorder);
-		resourcePanel.add(resourceTypePanel, BorderLayout.CENTER);
+//		resourceTypePanel.setBorder(rstPanelBorder);
+//		resourcePanel.add(resourceTypePanel, BorderLayout.CENTER);
 		rsbpBorder = new TitledBorder(BorderFactory.createEmptyBorder(5, 5, 5,
 				5), Local.getString("Web browser executable"));
 		rsBottomPanel.setBorder(rsbpBorder);

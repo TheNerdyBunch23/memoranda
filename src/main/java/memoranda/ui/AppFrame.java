@@ -43,7 +43,6 @@ import main.java.memoranda.ProjectListener;
 import main.java.memoranda.ResourcesList;
 import main.java.memoranda.TaskList;
 import main.java.memoranda.date.CurrentDate;
-import main.java.memoranda.ui.htmleditor.HTMLEditor;
 import main.java.memoranda.util.Configuration;
 import main.java.memoranda.util.Context;
 import main.java.memoranda.util.CurrentStorage;
@@ -800,7 +799,7 @@ public class AppFrame extends JFrame {
         chooser.setAcceptAllFileFilterUsed(false);
         chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
         chooser.addChoosableFileFilter(new AllFilesFilter(AllFilesFilter.ZIP));
-        //chooser.addChoosableFileFilter(new AllFilesFilter(AllFilesFilter.RTF));
+
         // fixes XP style look cosmetical problems JVM 1.4.2 and 1.4.2_01
         chooser.setPreferredSize(new Dimension(550, 375));
 
@@ -824,7 +823,6 @@ public class AppFrame extends JFrame {
         Context.put("LAST_SELECTED_PACK_FILE", chooser.getSelectedFile());        
         java.io.File f = chooser.getSelectedFile();
         ProjectPackager.unpack(f);
-//        projectsPanel.prjTablePanel.updateUI();
     }
 
     public void showPreferences() {
