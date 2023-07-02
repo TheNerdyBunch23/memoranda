@@ -148,10 +148,6 @@ public class PreferencesDialog extends JDialog {
 		}
 	}
 
-	public PreferencesDialog() {
-		this(null);
-	}
-
 	void jbInit() throws Exception {
 		titledBorder1 = new TitledBorder(BorderFactory.createEtchedBorder(
 				Color.white, new Color(156, 156, 158)), Local
@@ -706,9 +702,6 @@ public class PreferencesDialog extends JDialog {
 		Configuration.put("HEADER_FONT", headerFontCB.getSelectedItem());
 		Configuration.put("MONO_FONT", monoFontCB.getSelectedItem());
 		Configuration.put("BASE_FONT_SIZE", baseFontSize.getValue());
-		App.getFrame().workPanel.dailyItemsPanel.editorPanel.editor.editor.setAntiAlias(antialiasChB.isSelected());
-		App.getFrame().workPanel.dailyItemsPanel.editorPanel.initCSS();
-		App.getFrame().workPanel.dailyItemsPanel.editorPanel.editor.repaint();
 		
 		Configuration.saveConfig();
 		
@@ -764,14 +757,6 @@ public class PreferencesDialog extends JDialog {
 
 	void closeHideRB_actionPerformed(ActionEvent e) {
 		// this.askConfirmChB.setEnabled(false);
-	}
-
-	void lfSystemRB_actionPerformed(ActionEvent e) {
-		this.enableCustomLF(false);
-	}
-
-	void lfJavaRB_actionPerformed(ActionEvent e) {
-		this.enableCustomLF(false);
 	}
 
 	void lfCustomRB_actionPerformed(ActionEvent e) {

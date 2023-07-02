@@ -31,7 +31,7 @@ public class WorkPanel extends JPanel {
 	JPanel panel = new JPanel();
 	CardLayout cardLayout1 = new CardLayout();
 //**********************************************REMOVE vvvvvvvvvv
-	public DailyItemsPanel dailyItemsPanel = new DailyItemsPanel(this);
+	//public DailyItemsPanel dailyItemsPanel = new DailyItemsPanel(this);
 	public MapPanel mapPanel = new MapPanel();
 	public RoutePanel routePanel = new RoutePanel();
 	public BusAndDriverPanel busAndDriverPanel = new BusAndDriverPanel();

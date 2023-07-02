@@ -47,7 +47,6 @@ public class NotesControlPanel extends JPanel {
     JPanel buttonsPanel = new JPanel();
     JMenuItem ppAddBkmrk = new JMenuItem();
     JMenuItem ppClearNote = new JMenuItem();
-//    JMenuItem ppInvertSort = new JMenuItem();
 	JCheckBoxMenuItem ppInvertSort = new JCheckBoxMenuItem();
     JPopupMenu notesPPMenu = new JPopupMenu();
     JMenuItem ppOpenNote = new JMenuItem();
@@ -305,8 +304,6 @@ public class NotesControlPanel extends JPanel {
 		notesListPanel.notesList.update();
         notesList.updateUI();
 		notesList.clearSelection();
-//		notesList.requestFocus();*/
-//		((AppFrame)App.getFrame()).workPanel.dailyItemsPanel.editorPanel.editor.requestFocus();
     }
 	
     void ppOpenNote_actionPerformed(ActionEvent e) {
@@ -331,7 +328,6 @@ public class NotesControlPanel extends JPanel {
 	ppSetEnabled();
         notesList.updateUI();
 	notesList.clearSelection();
-	((AppFrame)App.getFrame()).workPanel.dailyItemsPanel.editorPanel.editor.requestFocus();	
     }
 
     void ppSetEnabled() {

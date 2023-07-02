@@ -231,11 +231,6 @@ public class EventsPanel extends JPanel {
                 EventsTable.EVENT);
         
         dlg.timeSpin.getModel().setValue(ev.getTime());
-        /*if (new CalendarDate(ev.getTime()).equals(CalendarDate.today())) 
-            ((SpinnerDateModel)dlg.timeSpin.getModel()).setStart(new Date());
-        else
-        ((SpinnerDateModel)dlg.timeSpin.getModel()).setStart(CalendarDate.today().getDate());
-        ((SpinnerDateModel)dlg.timeSpin.getModel()).setEnd(CalendarDate.tomorrow().getDate());*/    
         dlg.textField.setText(ev.getText());
         int rep = ev.getRepeat();
         if (rep > 0) {
@@ -292,9 +287,7 @@ public class EventsPanel extends JPanel {
 		//by (jcscoobyrs) 14-Nov-2003 at 10:24:38 AM
 		int mm = calendar.get(Calendar.MINUTE);//Fix deprecated methods to get hours
 		//by (jcscoobyrs) 14-Nov-2003 at 10:24:38 AM
-        
-        //int hh = ((Date) dlg.timeSpin.getModel().getValue()).getHours();
-        //int mm = ((Date) dlg.timeSpin.getModel().getValue()).getMinutes();
+
         String text = dlg.textField.getText();
         if (dlg.noRepeatRB.isSelected())
    	    EventsManager.createEvent(CurrentDate.get(), hh, mm, text);
@@ -337,9 +330,7 @@ public class EventsPanel extends JPanel {
     	//by (jcscoobyrs) 14-Nov-2003 at 10:24:38 AM
     	int mm = calendar.get(Calendar.MINUTE);//Fix deprecated methods to get hours
     	//by (jcscoobyrs) 14-Nov-2003 at 10:24:38 AM
-    	
-    	//int hh = ((Date) dlg.timeSpin.getModel().getValue()).getHours();
-    	//int mm = ((Date) dlg.timeSpin.getModel().getValue()).getMinutes();
+
     	String text = dlg.textField.getText();
 		
 		CalendarDate eventCalendarDate = new CalendarDate(dlg.getEventDate());
@@ -356,8 +347,6 @@ public class EventsPanel extends JPanel {
 	CurrentStorage.get().storeEventsManager();
         eventsTable.refresh();
         EventsScheduler.init();
-        parentPanel.calendar.jnCalendar.updateUI();
-        parentPanel.updateIndicators();
     }
 
     private void updateEvents(EventDialog dlg, int hh, int mm, String text) {

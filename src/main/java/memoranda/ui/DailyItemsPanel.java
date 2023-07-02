@@ -50,10 +50,10 @@ import main.java.memoranda.util.Util;
 
 /*$Id: DailyItemsPanel.java,v 1.22 2005/02/13 03:06:10 rawsushi Exp $*/
 public class DailyItemsPanel extends JPanel {
-    BorderLayout borderLayout1 = new BorderLayout();
+    /*BorderLayout borderLayout1 = new BorderLayout();
     JSplitPane splitPane = new JSplitPane();
     JPanel controlPanel = new JPanel(); /* Contains the calendar */
-    JPanel mainPanel = new JPanel();
+    /*JPanel mainPanel = new JPanel();
     BorderLayout borderLayout2 = new BorderLayout();
     JPanel statusPanel = new JPanel();
     BorderLayout borderLayout3 = new BorderLayout();
@@ -282,7 +282,7 @@ public class DailyItemsPanel extends JPanel {
         EventsScheduler.addListener(new EventNotificationListener() {
             public void eventIsOccured(main.java.memoranda.Event ev) {
                 /*DEBUG*/
-                System.out.println(ev.getTimeString() + " " + ev.getText());
+                /*System.out.println(ev.getTimeString() + " " + ev.getText());
                 updateIndicators();
             }
 
@@ -321,7 +321,7 @@ public class DailyItemsPanel extends JPanel {
 
         /*if ((currentNote != null) && !changedByHistory && !addedToHistory)
                             History.add(new HistoryItem(currentNote));*/
-		currentNoteChanged(currentNote,true);
+		/*currentNoteChanged(currentNote,true);
 		currentNote = CurrentProject.getNoteList().getNoteForDate(newdate);
  		CurrentNote.set(currentNote,true);
 		currentDate = CurrentDate.get();
@@ -334,7 +334,7 @@ public class DailyItemsPanel extends JPanel {
             }
         }*/
 
-		currentDateLabel.setText(newdate.getFullDateString());
+		/*currentDateLabel.setText(newdate.getFullDateString());
         if ((currentNote != null) && (currentNote.isMarked())) {
             currentDateLabel.setIcon(bookmarkIcon);
             currentDateLabel.setHorizontalTextPosition(SwingConstants.LEFT);
@@ -373,7 +373,7 @@ public class DailyItemsPanel extends JPanel {
             saveNote();
         /*if ((currentNote != null) && !changedByHistory && !addedToHistory)
                     History.add(new HistoryItem(currentNote));*/
-        CurrentProject.save();        
+        //CurrentProject.save();
         
         /*addedToHistory = false;
         if (!changedByHistory) {
@@ -383,7 +383,7 @@ public class DailyItemsPanel extends JPanel {
             }
         }*/
         
-        updateIndicators(CurrentDate.get(), tl);
+        /*updateIndicators(CurrentDate.get(), tl);
         App.getFrame().setCursor(cur);
     }
 
@@ -401,9 +401,9 @@ public class DailyItemsPanel extends JPanel {
 		currentNote.setId(Util.generateId());
         CurrentStorage.get().storeNote(currentNote, editorPanel.getDocument());
         /*DEBUG* System.out.println("Save");*/
-    }
+    //}
 
-    void toggleButton_actionPerformed(ActionEvent e) {
+    /*void toggleButton_actionPerformed(ActionEvent e) {
         if (expanded) {
             expanded = false;
             toggleButton.setIcon(expIcon);
@@ -432,7 +432,7 @@ public class DailyItemsPanel extends JPanel {
                     net.sf.memoranda.Event ev = (net.sf.memoranda.Event)it.next();   
                     evlist += ev.getTimeString()+" - "+ev.getText()+"\n";
                 } */
-                main.java.memoranda.Event ev = EventsScheduler.getFirstScheduledEvent();
+                /*main.java.memoranda.Event ev = EventsScheduler.getFirstScheduledEvent();
                 alarmB.setToolTipText(ev.getTimeString() + " - " + ev.getText());
                 indicatorsPanel.add(alarmB, null);
             }
@@ -476,5 +476,5 @@ public class DailyItemsPanel extends JPanel {
 
     void alarmB_actionPerformed(ActionEvent e) {
         parentPanel.routeButton_actionPerformed(null);
-    }
+    }*/
 }
