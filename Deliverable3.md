@@ -118,9 +118,10 @@ Answer as a team!
 > In this section I want you to point me to your main contributions (each of you individually). Some of the topcs are not needed for the first deliverables (you should know which things you should have done in this Sprint, if you don't then you have probably missed something):
 
 #### Andres Morales De Jesus:
-  **Links to GitHub commits with main code contribution (up to 5 links) - all Sprints:
-
-    - 
+  **Links to GitHub commits with main code contribution (up to 5 links)  - https://github.com/TheNerdyBunch23/memoranda/commit/  
+      8ed6134c1de2450e96acffec3ce48a20a69e0e86
+    - https://github.com/TheNerdyBunch23/memoranda/commits/US%2340/src/main/java/memoranda/ui/CreateRoutePanel.java
+    - https://github.com/TheNerdyBunch23/memoranda/commit/d9cb8f3b173eb7575ab40385b78644bd6b122486
 
    **GitHub links to your Unit Tests (up to 3 links) -- Sprint 2 and 3:
 
@@ -128,12 +129,15 @@ Answer as a team!
 
   **GitHub links to your Code Reviews (up to 3 links) -- Sprint 2 and 3:
 
-    - No code reviews on this sprint
+    - https://github.com/TheNerdyBunch23/memoranda/commit/a6c08bd35c0bc0c22f755306ffecbe6b54b521b6
+    
+    - https://github.com/TheNerdyBunch23/memoranda/commit/151c604e189936c062db1562ec71cf080cfc3442
 
   **How did you contribute to Static Analysis -- Sprint 3:
 
-    - link1
-    - link2
+    - https://github.com/TheNerdyBunch23/memoranda/commit/151c604e189936c062db1562ec71cf080cfc3442
+    
+    - https://github.com/TheNerdyBunch23/memoranda/commit/a6c08bd35c0bc0c22f755306ffecbe6b54b521b6
  
  **What was your main contribution to the Quality Policy documentation?:
 
